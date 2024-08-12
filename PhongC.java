@@ -3,6 +3,6 @@ public class PhongC extends Phong{
         super("C", 100);
     }
     public String toString() {
-        return "PhongC, Giá 1 lốp";
+        return "Phòng C, Giá 1 lốp";
     }
 }

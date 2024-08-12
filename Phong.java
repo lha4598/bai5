@@ -28,23 +28,9 @@ public class Phong {
     public void setGia(int gia) {
         this.gia = gia;
     }
-    public void NhapPhong() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Chọn loại phòng:");
-        System.out.println("A \n" +
-                "B \n" +
-                "C");
-        loai = sc.nextLine();
-        if (loai.equals("A")) {
-            Phong phongA = new PhongA();
-        }
-        if (loai.equals("B")) {
-            Phong phongB = new PhongB();
-        }
-        if (loai.equals("C")) {
-            Phong phongC = new PhongC();
-        }
+
+    @Override
+    public String toString() {
+        return "";
     }
-
-
 }

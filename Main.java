@@ -21,19 +21,25 @@ public class Main {
                     break;
                 }
                 case 2: {
+                    System.out.println("Nhập cccd của khách cần xóa");
+                    String cc = sc.nextLine();
+                    khach.xoaNguoi(cc);
+                    break;
 
                 }
                 case 3: {
                     System.out.println("Nhập cccd cần thanh toán: ");
                     String c = sc.nextLine();
                     System.out.println("Số tiền phải trả là: " + khach.tinhTien(c));
+                    break;
 
                 }
                 case 4: {
-
+                    khach.showDanhSach();
+                    break;
                 }
                 case 5: {
-                    break;
+                    return;
                 }
 
             }

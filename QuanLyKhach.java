@@ -9,16 +9,27 @@ public class QuanLyKhach {
     public void addNguoi(Nguoi nguoi) {
         nguois.add(nguoi);
     }
-    public int tinhTien(String c) {
-        Nguoi nguoi = this.nguois.stream().filter(nguoi1 -> nguoi1.getCccd().equals(c)).findFirst().orElse(null);
+    public boolean xoaNguoi(String cccd) {
+        Nguoi nguoi = this.nguois.stream().filter(nguoi1 -> nguoi1.getCccd().equals(cccd)).findFirst().orElse(null);
+        if (nguoi == null) {
+            return false;
+        } else {
+            this.nguois.remove(nguoi);
+            return true;
+
+        }
+    }
+
+    public int tinhTien(String cccd) {
+        Nguoi nguoi = this.nguois.stream().filter(nguoi1 -> nguoi1.getCccd().equals(cccd)).findFirst().orElse(null);
         if (nguoi == null) {
             return 0 ;
         }else {
             return nguoi.getPhong().getGia() * nguoi.getSongay();
         }
     }
-    public void showDanhSach(Nguoi nguoi) {
-        this.nguois.forEach(n -> System.out.println("hh"));
+    public void showDanhSach() {
+        this.nguois.forEach(nguoi -> System.out.println(nguoi.toString()));
     }
 
 }

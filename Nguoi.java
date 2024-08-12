@@ -66,11 +66,26 @@ public class Nguoi {
         sc.nextLine();
         System.out.println("Nhập CCCD");
         cccd = sc.nextLine();
-        phong = new Phong();
-        phong.NhapPhong();
+        System.out.println("Chọn loại phòng:");
+        System.out.println("A \n" +
+                           "B \n" +
+                           "C");
+        String chon = sc.nextLine();
+        if (chon.equals("A")) {
+            phong = new PhongA();
+        }
+        if (chon.equals("B")) {
+            phong = new PhongB();
+        }
+        if (chon.equals("C")) {
+            phong = new PhongC();
+        }
         System.out.println("Nhập số ngày thuê: ");
         songay = sc.nextInt();
         sc.nextLine();
+    }
+    public String toString() {
+        return "Tên :" + ten + " // Tuổi: " + tuoi +" // CCCD: " + cccd  +" // Số ngày thuê: " + songay+ " // " + phong.toString();
     }
 
 }
